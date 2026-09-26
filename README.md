@@ -563,7 +563,7 @@ The poster collection includes indexes supporting user-based poster history and 
 Template data can be seeded through:
 
 ```bash
-npm run seed
+bun run seed
 ```
 
 The seed script is located at:
@@ -577,7 +577,7 @@ scripts/seed-templates.ts
 Install dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 Create the environment file:
@@ -605,13 +605,13 @@ CLOUDINARY_API_SECRET=
 Seed the templates:
 
 ```bash
-npm run seed
+bun run seed
 ```
 
 Start the development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 The backend will normally be available at:
@@ -631,7 +631,7 @@ http://localhost:5000/api
 Compile the TypeScript project:
 
 ```bash
-npm run build
+bun run build
 ```
 
 The compiled output is generated in:
@@ -645,17 +645,17 @@ dist/
 After building:
 
 ```bash
-npm start
+bun start
 ```
 
 ## Backend Scripts
 
 | Script | Purpose |
 |---|---|
-| `npm run dev` | Start the development server with TypeScript watch mode |
-| `npm run build` | Compile TypeScript |
-| `npm start` | Start the compiled production server |
-| `npm run seed` | Seed poster templates |
+| `bun run dev` | Start the development server with TypeScript watch mode |
+| `bun run build` | Compile TypeScript |
+| `bun start` | Start the compiled production server |
+| `bun run seed` | Seed poster templates |
 
 ## Frontend Integration
 
