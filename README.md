@@ -787,4 +787,4 @@ Redis can be introduced later if the application requires those capabilities.
 
 ## License
 
-This project was created as an MVP assignment/project.
+This project was created as an MVP assignment/project
