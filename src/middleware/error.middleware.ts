@@ -32,7 +32,11 @@ export const errorMiddleware: ErrorRequestHandler = (
     });
   }
 
-  console.error(error);
+  console.error('[API ERROR]', {
+    name: error instanceof Error ? error.name : undefined,
+    message: error instanceof Error ? error.message : error,
+    stack: error instanceof Error ? error.stack : undefined,
+  });
 
   return res.status(500).json({
     success: false,
@@ -43,7 +47,7 @@ export const errorMiddleware: ErrorRequestHandler = (
           ? error.message
           : 'Internal server error.',
     error: {
-      code: 'INTERNAL_SERVER_ERROR'
-    }
+      code: 'INTERNAL_SERVER_ERROR',
+    },
   });
 };

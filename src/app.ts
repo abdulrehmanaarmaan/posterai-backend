@@ -23,6 +23,7 @@ import {
 import {
   errorMiddleware
 } from './middleware/error.middleware.js';
+import { databaseMiddleware } from './middleware/database.middleware.js';
 
 const app = express();
 
@@ -53,7 +54,7 @@ app.use(
 );
 
 app.get(
-  '/api/health',
+  '/',
   (_req, res) => {
     res.status(200).json({
       success: true,
@@ -64,6 +65,8 @@ app.get(
     });
   }
 );
+
+app.use(databaseMiddleware);
 
 app.use(
   '/api/auth',
